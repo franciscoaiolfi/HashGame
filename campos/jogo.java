@@ -11,6 +11,11 @@ public class jogo {
 
     while (game) {
       desenhaJogo(velha);
+      victory = verificarVitoria(velha);
+      if (!victory.equals("")) {
+        System.out.printf("Jogador %s venceu%n", victory);
+        break;
+      }
     }
   }
 
@@ -26,5 +31,9 @@ public class jogo {
     System.out.println("     --------------");
     System.out.printf("0    %c | %c | %c %n", velha[2][0].getSymbol(), velha[2][1].getSymbol(),
         velha[2][2].getSymbol());
+  }
+
+  public static String verificarVitoria(Campo[][] velha) {
+    return "";
   }
 }
